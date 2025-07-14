@@ -1,4 +1,4 @@
-import MenuItem from "./components/MenuItem"
+import {MenuItem} from "./components/MenuItem"
 import OrderContents from "./components/OrderContents"
 import { menuItems } from "./data/db"
 import useOrder from "./hooks/useOrder"

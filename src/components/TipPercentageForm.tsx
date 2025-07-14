@@ -1,5 +1,3 @@
-import { Dispatch, SetStateAction } from "react"
-
 const tipOptions = [
   {
     id: 'tip-10',
@@ -18,7 +16,7 @@ const tipOptions = [
   },
 ]
 type TipPercentageFormProps = {
-   setTip: Dispatch<SetStateAction<number>>,
+   setTip: React.Dispatch<React.SetStateAction<number>>,
    tip: number,
 }
 function TipPercentageForm({setTip, tip}: TipPercentageFormProps) {
