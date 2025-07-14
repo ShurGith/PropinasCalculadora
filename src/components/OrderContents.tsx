@@ -1,5 +1,5 @@
 import { formatCurrency } from "../helpers"
-import { MenuItem, OrderItem } from "../types"
+import type { MenuItem, OrderItem } from "../types"
 
 type OrderContentsProps ={
     order: OrderItem[],
@@ -11,10 +11,7 @@ export default function OrderContents({order, removeItem} : OrderContentsProps) 
     <div>
         <h2 className=" text-4xl font-black">Consumo</h2>
         <div className="space-y-3 mt-10">
-            {order.length === 0 ? 
-                <p className="text-center">La Orden está vacia</p>
-            :(
-                order.map(item =>(
+               { order.map(item =>(
                     <div key={item.id}
                     className="flex justify-between items-center border-t border-gray-200 py-5 last-of-type:border-b"
                     >
@@ -33,10 +30,7 @@ export default function OrderContents({order, removeItem} : OrderContentsProps) 
                             X
                         </button>
                     </div>
-                ))
-            )
-            
-            }
+                ))}
         </div>
     </div>
   )
